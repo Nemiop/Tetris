@@ -1,10 +1,8 @@
-package com.example.tetrisnoactivity.storage.models
-
-import com.example.tetrisnoactivity.storage.helper.Frame
+package com.example.tetrisnoactivity.models
 
 enum class Shape(val frameCount: Int, val startPosition: Int){
     Tetromino1(1,1){
-        override fun getFrame(frameNumber: Int): Frame{
+        override fun getFrame(frameNumber: Int): Frame {
             return Frame(2)
                     .addRow("11")
                     .addRow("11")
@@ -12,7 +10,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int){
     },
 
     Tetromino2(2, 1){
-        override fun getFrame(frameNumber: Int): Frame{
+        override fun getFrame(frameNumber: Int): Frame {
             return when(frameNumber){
                 0 -> Frame(2)
                         .addRow("01")
@@ -27,7 +25,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int){
     },
 
     Tetromino3(2, 1){
-        override fun getFrame(frameNumber: Int): Frame{
+        override fun getFrame(frameNumber: Int): Frame {
             return when(frameNumber){
                 0 -> Frame(2)
                         .addRow("01")
@@ -57,7 +55,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int){
 
 
     Tetromino5(4,1){
-        override fun getFrame(frameNumber: Int): Frame{
+        override fun getFrame(frameNumber: Int): Frame {
             return when(frameNumber){
                 0 -> Frame(3)
                         .addRow("010")
@@ -79,7 +77,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int){
     },
 
     Tetromino6(4,1){
-        override fun getFrame(frameNumber: Int): Frame{
+        override fun getFrame(frameNumber: Int): Frame {
             return when(frameNumber){
                 0 -> Frame(3)
                         .addRow("100")
@@ -101,7 +99,7 @@ enum class Shape(val frameCount: Int, val startPosition: Int){
     },
 
     Tetromino7(4,1){
-        override fun getFrame(frameNumber: Int): Frame{
+        override fun getFrame(frameNumber: Int): Frame {
             return when(frameNumber){
                 0 -> Frame(3)
                         .addRow("001")

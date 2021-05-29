@@ -20,6 +20,7 @@ class GameActivity : AppCompatActivity() {
         val btnRestart = findViewById<Button>(R.id.btn_restart)
         tvCurrentScore = findViewById<TextView>(R.id.tv_current_score)
         tvHighScore = findViewById<TextView>(R.id.tv_high_score)
+
         updateHighScore()
         updateCurrentScore()
     }

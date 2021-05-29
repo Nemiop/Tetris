@@ -1,11 +1,11 @@
-package com.example.tetrisnoactivity.storage.helper
+package com.example.tetrisnoactivity.models
 
-import com.example.tetrisnoactivity.storage.helper.array2dOfByte
+import com.example.tetrisnoactivity.array2dOfByte
 
 class Frame(private val width: Int){
     val data: ArrayList<ByteArray> = ArrayList()
 
-    fun addRow(byteStr: String): Frame{
+    fun addRow(byteStr: String): Frame {
         val row = ByteArray(byteStr.length)
 
         for (index in byteStr.indices){
