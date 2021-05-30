@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             appBar.hide()
         */
         tvHighScore = findViewById<TextView>(R.id.tv_high_score)
+        initHighScore()
 
         val btnNewGame: Button = findViewById<Button>(R.id.btn_new_game)
         val btnResetScore: Button = findViewById<Button>(R.id.btn_reset_score)
@@ -34,6 +35,12 @@ class MainActivity : AppCompatActivity() {
         btnResetScore.setOnClickListener(this::onBtnResetScoreClick)
         btnExit.setOnClickListener(this::onBtnExitClick)
     }
+
+    private fun initHighScore(){
+        val preferences = AppPreferences(this)
+        tvHighScore?.text = "High score: ${preferences.getHighScore()}"
+    }
+
 
     private fun onBtnNewGameClick(view: View){
         val intent = Intent(this, GameActivity::class.java)
